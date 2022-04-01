@@ -54,13 +54,17 @@ const Producto = () => {
                 <div className={`${styles.description} row`}>
                   <div className={`${styles.rotateImg} col-md-1 col-sm-12`}>
                     <div className={`${styles.itemImg}`}>
-                      {product?.images?.map(image => {
-                        <Image key={`image-${image._id}`} src={image.location} />
-                      })}
+                      {
+                        product.images.map(img => {
+                          return (
+                            <img className="w-100" key={`img-${img._id}`} src={img.location} alt="" />
+                          )
+                        })
+                      }
                     </div>
                   </div>
                   <div className={`${styles.imgProduct} col-4`}>
-                    <Image src={test} />
+                    <img className="w-100" src={product.images[0].location} />
                   </div>
                   <div className={`${styles.dataProduct} col-7`}>
                     <div className={`${styles.descriptionProduct} row`}>
