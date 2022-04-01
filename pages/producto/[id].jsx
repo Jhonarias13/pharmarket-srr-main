@@ -30,6 +30,13 @@ const Producto = () => {
 
   console.log('el producto =>', product);
 
+  const iamgeSelected = product?.images[0]?.location;
+
+
+  function handdlerImages(imageUrl) {
+    iamgeSelected = imageUrl;
+  }
+
   return (
     <div className={`${styles.container} container-fluid`}>
       <Head>
@@ -64,7 +71,7 @@ const Producto = () => {
                     </div>
                   </div>
                   <div className={`${styles.imgProduct} col-4`}>
-                    <img className="w-100" src={product.images[0].location} />
+                    <img className="w-100" src={iamgeSelected} />
                   </div>
                   <div className={`${styles.dataProduct} col-7`}>
                     <div className={`${styles.descriptionProduct} row`}>
