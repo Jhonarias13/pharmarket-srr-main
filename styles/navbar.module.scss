@@ -1,0 +1,57 @@
+.navbar {
+  min-height: 72px;
+  background-color: white!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navLink {
+  color: #39546d!important;
+}
+
+.navLink:hover {
+  color: #008cff!important;
+}
+
+.btnPrimary {
+  margin: 0;
+  padding: 0 22px;
+  height: 2.81rem;
+  line-height: 2.8rem;
+  border-radius: 9px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #008cff;
+  box-shadow: 0 4px 10px 0 rgb(0 118 255 / 20%);
+  color: white!important;
+}
+
+.btnPrimary:hover {
+  color: white!important;
+  background: rgb(0, 119, 255);
+  box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}
+
+.btnLight {
+  margin: 0;
+  padding: 0 1.2rem;
+  height: 2.81rem;
+  line-height: 2.8rem;
+  border-radius: 7px;
+  font-weight: 500;
+  background: #fff;
+  color: #696969;
+}
+
+.btnLight:hover {
+  transition: 200ms;  
+  box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
+}
+
+.containerXl {
+  background-color: red;
+}
+

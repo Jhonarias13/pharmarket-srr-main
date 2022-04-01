@@ -1,0 +1,358 @@
+@import "mixins";
+.container {
+  padding-top: 15px;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  .All {
+    .product {
+      flex-wrap: nowrap;
+      .productDetail {
+        border-radius: 6px;
+        padding: 0px;
+        flex-direction: column;
+        height: fit-content;
+        .description {
+          .rotateImg {
+            padding-top: 15px;
+            padding-left: 25px;
+            .itemImg {
+              height: 55px;
+              width: 55px;
+              border-radius: 6px;
+              border: 2px solid #439bff;
+            }
+          }
+          .imgProduct {
+
+          }
+          .dataProduct {
+            padding-top: 15px;
+            padding-right: 30px;
+            .descriptionProduct {
+              span {
+                font-size: 22px;
+                line-height: 25px;
+              }
+            }
+            .data {
+              margin-top: 30px;
+              list-style: none;
+              padding-left: 0px;
+              .item {
+                margin-bottom: 12px;
+                span {
+                  font-size: 14px;
+                  color: rgb(153, 150, 150);
+                }
+                p {
+                  font-size: 14px;
+                  line-height: 20px;
+                }
+              }
+            }
+          }
+        }
+        .caracteristics {
+          padding-left: 15px;
+          border-top: 1px solid rgba(133, 133, 133, 0.383);
+          .textTop {
+            margin-top: 15px;
+            margin-bottom: 20px;
+            span {
+              font-size: 18px;
+            }
+          }
+          .caractItems {
+            .item {
+              margin-bottom: 15px;
+              .firstItem {
+                .icon {
+                  color: black;
+                }
+              }
+              .secondItem {
+                .type {
+                  color: rgb(153, 150, 150);
+
+                  .info {
+                    color: black;
+                  }
+                }
+
+              }
+            }
+          }
+        }
+      }
+      .buySection {
+        padding: 15px;
+        margin-left: 5px;
+        .buyProduct {
+          border-radius: 6px;
+          padding: 15px;
+          h5 {
+            margin: 0;
+            padding: 15px 15px 15px 15px;
+          }
+          span {
+            padding: 0px 15px 15px 15px;;
+          }
+          .amountControl {
+            display: flex;
+            justify-content: space-around;
+            margin: 0px;
+            padding: 0px 15px 15px 15px;
+            .sub {
+              display: flex;
+              height: 45px;
+              width: 45px;
+              min-height: 45px;
+              min-width: 45px;
+              border-radius: 6px;
+              background-color: #EEF3F4;
+              justify-content: space-evenly;
+              align-items: center;
+            }
+            .number {
+              display: flex;
+              height: 45px;
+              width: 100%;
+              margin: 0px 5px;
+              border-radius: 6px;
+              background-color: #EEF3F4;
+              justify-content: space-evenly;
+              align-items: center;
+            }
+            .sum {
+              display: flex;
+              height: 45px;
+              width: 45px;
+              min-height: 45px;
+              min-width: 45px;
+              border-radius: 6px;
+              background-color: #EEF3F4;
+              justify-content: space-evenly;
+              align-items: center;
+            }
+          }
+          .btn {
+            padding: 0px 15px;
+          }
+          .security {
+            border-top: 1px solid #cccecf;
+            padding: 12px 0px;
+            .padlock {
+              height: 20px;
+              width: 20px;
+            }
+            span {
+              padding: 0px 0px 0px 8px !important;
+            }
+          }
+        }
+        .payments {
+          padding: 15px;
+          border-radius: 6px;
+          .methods {
+            margin-bottom: 15px;
+            padding: 0px;
+            span {
+              font-size: 16px;
+            }
+          }
+          .transfer {
+            .item {
+              padding: 0px;
+              margin-bottom: 12px;
+              span {
+                color: grey;
+              }
+            }
+            .transferItem {
+              object-fit: fill;
+              object-position: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.container {
+  @include mobile {
+    padding: 0px;
+    width: 100%;
+  }
+  .AllMobile {
+    .product {
+      .productDetail {
+        .productInfo {
+          padding: 15px;
+          span {
+            font-size: 16px;
+          }
+        }
+        .imgRotate {
+          width: 100%;
+          padding: 15px 15px 0px 15px;
+          .boxes {
+            height: 50px;
+            width: 50px;
+            border-radius: 6px;
+            border: 2px solid #439bff;
+          }
+        }
+        .price {
+          padding: 15px 15px 0px 15px;
+          .text {
+            span {
+              font-size: 32px;
+            }
+          }
+        }
+        .amount {
+          padding: 15px 15px 0px 15px;
+          .text {
+            font-size: 13px;
+          }
+        }
+        .amountControl {
+          display: flex;
+          justify-content: space-around;
+          margin: 0px;
+          padding: 10px 15px 10px 15px;
+          .sub {
+            display: flex;
+            height: 45px;
+            width: 45px;
+            min-height: 45px;
+            min-width: 45px;
+            border-radius: 6px;
+            background-color: #EEF3F4;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+          .number {
+            display: flex;
+            height: 45px;
+            width: 100%;
+            margin: 0px 5px;
+            border-radius: 6px;
+            background-color: #EEF3F4;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+          .sum {
+            display: flex;
+            height: 45px;
+            width: 45px;
+            min-height: 45px;
+            min-width: 45px;
+            border-radius: 6px;
+            background-color: #EEF3F4;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+        }
+        .aggCart {
+          padding: 15px 15px 0px 15px;
+          button {
+            background-color: #00a3ff;
+            border: none;
+          }
+        }
+        .buy {
+          padding: 0px 15px 0px 15px;
+          button {
+            background-color: #e5e5e5;
+            border: none;
+          }
+        }
+        .security {
+          padding: 15px 15px 15px 15px;
+          .padlock {
+            margin-right: 5px;
+            img {
+              height: 20px;
+              width: 20px;
+            }
+          }
+          span {
+            font-size: 15px;
+            color: #00a3ff;
+          }
+        }
+      }
+      .information {
+        .data {
+          list-style: none;
+          padding: 15px 15px 15px 15px;
+          .item {
+            span {
+              color: #999999;
+            }
+            p {
+              span {
+                color: #999999;
+              }
+            }
+          }
+        }
+      }
+      .caracteristics {
+        .textTop {
+          padding: 15px 15px 15px 15px;
+          span {
+            font-size: 16px;
+          }
+        }
+        .caractItems {
+          padding: 15px 15px 5px 15px;
+          .item {
+            .secondItem {
+              span {
+                color: #999999;
+                span {
+                  color: black;
+                }
+              }
+            }
+          }
+        }
+        .caractItems2 {
+          padding: 0px 15px 15px 15px;
+          .item {
+            .secondItem {
+              span {
+                color: #999999;
+                span {
+                  color: black;
+                }
+              }
+            }
+          }
+        }
+      }
+      .payments {
+        .methods {
+          padding: 15px 15px 0px 15px;
+        }
+        .transfer {
+          padding: 15px 15px 0px 26px;
+          span {
+            font-size: 14px;
+            color: gray;
+          }
+          .logos {
+            display: flex;
+            .transferItem {
+              object-fit: fill;
+              object-position: center;
+              margin-right: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

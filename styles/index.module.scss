@@ -1,0 +1,29 @@
+.title {
+  margin-top: 70px;
+  font-size: 48px;
+  line-height: 55px;
+  font-weight: 650;
+  color: #0d232e;
+}
+
+
+.description {
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 80%;
+  line-height: 30px;
+  font-weight: 500;
+  color: #282828;
+}
+
+.textPrimary {
+  color: #00A3FF!important;
+}
+
+.svg {
+  position: absolute;
+  z-index: 0;
+  top: 300px;
+  width: 100vw;
+  left: 0;
+}
