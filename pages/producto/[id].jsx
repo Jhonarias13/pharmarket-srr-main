@@ -22,10 +22,13 @@ import useFetch from "../../hooks/useFetch";
 
 const Producto = () => {
   const router = useRouter();
-  const slug_product = router.query.id;
-  const endPoint = `${config.BASE_URL_API}inventory/public/productBySlug/${slug_product}`;
-  const product = useFetch(endPoint);
-  console.log(product);
+  const { query } = router;
+  const endpoint = `${config.BASE_URL_API}inventory/public/productBySlug/${query.id}`;
+
+
+  const product = useFetch(endpoint);
+
+  console.log('el producto =>', product);
 
   return (
     <div className={`${styles.container} container-fluid`}>
@@ -41,17 +44,19 @@ const Producto = () => {
       <div className={`${styles.All} container web p-0`}>
         <div className={`${styles.product} row m-0`}>
           {product === null ? (
-            <h1>Cargando..</h1>
+            <div>Cargando..</div>
           ) : (
             <>
               <div
-                key={`product-${product.data._id}`}
+                key={`product-${product._id}`}
                 className={`${styles.productDetail} card col-md-9 col-sm-12`}
               >
                 <div className={`${styles.description} row`}>
                   <div className={`${styles.rotateImg} col-md-1 col-sm-12`}>
                     <div className={`${styles.itemImg}`}>
-                      <Image src={test} />
+                      {product?.images?.map(image => {
+                        <Image key={`image-${image._id}`} src={image.location} />
+                      })}
                     </div>
                   </div>
                   <div className={`${styles.imgProduct} col-4`}>
@@ -68,13 +73,11 @@ const Producto = () => {
                       <li className={`${styles.item} d-flex`}>
                         <p>
                           <span>Presentación comercial :</span>
-                          <h1>a</h1>
                         </p>
                       </li>
                       <li className={`${styles.item} d-flex`}>
                         <span>Unidad de referencia :</span>
                         <p className="mb-0">
-                          <h1>hola</h1>
                         </p>
                       </li>
                       <li className={`${styles.item} d-flex`}>
@@ -173,7 +176,7 @@ const Producto = () => {
               </div>
               <div className={`${styles.buySection} col-3`}>
                 <div className={`${styles.buyProduct} row card p-0`}>
-                  <h5>$15.000</h5>
+                  <h5>${product.public_price}</h5>
                   <span>stock disponible</span>
                   <div className={styles.amountControl}>
                     <div className={`${styles.sum} p-3`}>
@@ -479,6 +482,8 @@ const Producto = () => {
       </div>
     </div>
   );
-};
+}
+
+
 
 export default Producto;
