@@ -61,13 +61,16 @@ const Producto = () => {
                 <div className={`${styles.description} row`}>
                   <div className={`${styles.rotateImg} col-md-1 col-sm-12`}>
                     <div className={`${styles.itemImg}`}>
-                      {
-                        product.images.map(img => {
-                          return (
-                            <img className="w-100" key={`img-${img._id}`} src={img.location} alt="" />
-                          )
-                        })
-                      }
+                      {product.images.map((img) => {
+                        return (
+                          <img
+                            className="w-100"
+                            key={`img-${img._id}`}
+                            src={img.location}
+                            alt=""
+                          />
+                        );
+                      })}
                     </div>
                   </div>
                   <div className={`${styles.imgProduct} col-4`}>
@@ -84,12 +87,12 @@ const Producto = () => {
                       <li className={`${styles.item} d-flex`}>
                         <p>
                           <span>Presentación comercial :</span>
+                          {product.commercial_presentation_name}
                         </p>
                       </li>
                       <li className={`${styles.item} d-flex`}>
                         <span>Unidad de referencia :</span>
-                        <p className="mb-0">
-                        </p>
+                        <p className="mb-0"></p>
                       </li>
                       <li className={`${styles.item} d-flex`}>
                         <span>Precio unidad :</span>
